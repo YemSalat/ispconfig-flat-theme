@@ -5,7 +5,7 @@
         <meta charset="<tmpl_var name="html_content_encoding">" />
         <title><tmpl_var name="app_title"> <tmpl_var name="app_version"></title>
         <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-        <link href="themes/flatui/css/styles.css" rel="stylesheet" media="screen" type="text/css" />
+        <link href="themes/flatui/css/fontello.css" rel="stylesheet" media="screen" type="text/css" />
         <link href="themes/flatui/css/styles.css" rel="stylesheet" media="screen" type="text/css" />
         <link href="themes/flatui/css/print.css" rel="stylesheet" media="print" type="text/css" />
         <!--[if IE 9]><link href="themes/flatui/css/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -25,8 +25,8 @@
         <script language="JavaScript" type="text/javascript">
             jQuery(document).ready(function() {
                 loadInitContent();
-				
-				$('form').not('#dummy_login_form').attr('autocomplete','off');
+                
+                $('form').not('#dummy_login_form').attr('autocomplete','off');
                 
                 $("#pageForm").submit(function(e){
                     //Prevent form submit: e.preventDefault() in lists
@@ -53,31 +53,31 @@
                 tabChangeWarning = '<tmpl_var name="tabchange_warning_enabled">';
                 tabChangeWarningTxt = '<tmpl_var name="global_tabchange_warning_txt">';
                 tabChangeDiscardTxt = '<tmpl_var name="global_tabchange_discard_txt">';
-				
-				// Store password in browser; works in Firefox, but not Chrome
-				$('#username').live("blur", function(){
-					if($('#username').val() == '') {
-						return true;
-					}
-					if($('#dummy_username').val() == '' || $('#dummy_username').val() != $(this).val()){
-						$('#dummy_login').show();
-						$('#dummy_username').attr('value', $(this).val()).trigger('focus').trigger('blur');
-						$('#dummy_login').hide();
-					}
-					if($('#dummy_username').val() == $(this).val() && $(this).val() != ''){
-						$('#passwort').val($('#dummy_passwort').val());
-					} else {
-						$('#passwort').val('');
-					}
-					$('#passwort').focus();
-				});
-				
-				$('#username').live("keyup", function(){
-					$('#dummy_username').val('');
-					$('#dummy_passwort').val('');
-					$('#passwort').val('');
-				});
-				
+                
+                // Store password in browser; works in Firefox, but not Chrome
+                $('#username').live("blur", function(){
+                    if($('#username').val() == '') {
+                        return true;
+                    }
+                    if($('#dummy_username').val() == '' || $('#dummy_username').val() != $(this).val()){
+                        $('#dummy_login').show();
+                        $('#dummy_username').attr('value', $(this).val()).trigger('focus').trigger('blur');
+                        $('#dummy_login').hide();
+                    }
+                    if($('#dummy_username').val() == $(this).val() && $(this).val() != ''){
+                        $('#passwort').val($('#dummy_passwort').val());
+                    } else {
+                        $('#passwort').val('');
+                    }
+                    $('#passwort').focus();
+                });
+                
+                $('#username').live("keyup", function(){
+                    $('#dummy_username').val('');
+                    $('#dummy_passwort').val('');
+                    $('#passwort').val('');
+                });
+                
             });
             
             
@@ -165,7 +165,7 @@
                 <!-- begin: #content -->
                 <section id="content">
                     <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
-						<input type="text" style="display:none" /><input type="password" style="display:none"/>
+                        <input type="text" style="display:none" /><input type="password" style="display:none"/>
                         <div id="pageContent"><!-- AJAX CONTENT --></div>
                     </form>
                     <div id="ie_clearing">&nbsp;</div>
@@ -179,7 +179,7 @@
                 Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a>
             </footer><!-- end: footer -->
         </div>
-		
+        
 <div id="dummy_login" style="display:none;position:absolute;top:-1000px;left:-1000px;">
 <form action="" method="post" target="dummy_login" id="dummy_login_form">
 <input name="username" id="dummy_username" type="text" autocomplete="on" value="" />
