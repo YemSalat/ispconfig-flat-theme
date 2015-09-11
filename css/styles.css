@@ -47,7 +47,7 @@ hr {
 }
 textarea, pre, tt, code {
     font-family: Consolas,"Lucida Console","Courier New",monospace;
-    font-size: 0.9em;	
+    font-size: 0.9em;   
 }
 
 h1,h2,h3,h4,h5,h6 { 
@@ -104,7 +104,7 @@ header {
     position: relative;
     color: #faf0e6;
     padding: 15px 2em 5px 20px;
-    background: url("../images/header_bg.png") repeat-x top left #9a9a9a;
+    background: #9a9a9a;
 }
 header h1 {
     font-size:2.5em;
@@ -843,7 +843,7 @@ span.small { font-size: 0.9em; }
 .textInput#password,
 .textInput#passwort,
 .textInput#source_password { width: 100px; }
-.selectInput#language {	width: 75px; }
+.selectInput#language { width: 75px; }
 .selectInput#client_group_id, .selectInput#default_group { width: 125px; }
 input#refresh, input#retry, input#expire, input#minimum, input#ttl { width: 50px !important; }
 
@@ -859,7 +859,7 @@ select.withicons option {
     background-repeat:no-repeat;
     background-position: 1px;
     padding-left:24px;
-}	
+}   
 div[class^=country-] {
     background-image: url("../icons/flags_sprite.png");
     background-repeat: no-repeat;
@@ -1864,3 +1864,4 @@ a.link-page.current-page {
     font-size: 12px;
     text-decoration: underline;
 }
+
